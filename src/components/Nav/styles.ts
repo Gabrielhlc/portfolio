@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
     width: 100%;
     height: 137px;
     
+    margin-bottom: 120px;
+    
+    display: flex;
     align-items: center;
 `;
 
@@ -14,9 +16,21 @@ export const Logo = styled.div`
     align-items: center;
 `;
 
-export const Text = styled.span`
+export const LogoText = styled.span`
     font-weight: 500;
     font-size: 2rem;
+`;
+
+export const NavLink = styled.span`
+    font-weight: 500;
+    font-size: 2rem;
+    
+    &:hover {
+        cursor: pointer;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-image: ${({ theme }) => theme["linear-gradient"]} 1;
+    }
 `;
 
 export const NavItems = styled.div`

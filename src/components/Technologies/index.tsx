@@ -4,7 +4,7 @@ import { stacks } from '../../../stacks.js';
 
 export function Technologies() {
     return (
-        <Container>
+        <Container id="technologies">
             <Title>Technologies</Title>
 
             <StackContainer>
@@ -28,7 +28,7 @@ export function Technologies() {
                 <AdditionalNode>· C1 english</AdditionalNode>
                 <AdditionalNode>· ESLint</AdditionalNode>
                 <AdditionalNode>· Creativity</AdditionalNode>
-                <AdditionalNode>· Quick Learning</AdditionalNode>
+                <AdditionalNode>· Quick learning</AdditionalNode>
                 <AdditionalNode>· Teamwork</AdditionalNode>
                 <AdditionalNode>· Critical thinking</AdditionalNode>
                 <AdditionalNode>· Java</AdditionalNode>
