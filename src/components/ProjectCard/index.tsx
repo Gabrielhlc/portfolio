@@ -7,9 +7,10 @@ interface ProjectCardProps {
     source: StaticImageData;
     alt: string;
     description: string;
+    githubPage: string;
 }
 
-export function ProjectCard({ project, source, alt, description }: ProjectCardProps) {
+export function ProjectCard({ project, source, alt, description, githubPage }: ProjectCardProps) {
     return (
         <Container>
             <Image src={source} alt={alt} width={500} height={266} style={{ borderRadius: "8px" }} />
@@ -20,7 +21,7 @@ export function ProjectCard({ project, source, alt, description }: ProjectCardPr
 
             <Description>{description}</Description>
 
-            <Button size="sm" text="Look it up" />
+            <Button size="sm" text="Look it up!" onClickURL={githubPage} />
 
         </Container>
     )

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    margin-left: 60px;
-    margin-bottom: 150px;
+    margin-bottom: 7.5rem;
 `;
 
 export const Title = styled.h1`
@@ -11,7 +10,10 @@ export const Title = styled.h1`
 `;
 
 export const ProjectsWrapper = styled.div`
-    margin-left: 108px;
+    width: 100%;
+    margin-left: 6.75rem;
+    margin-right: 6.75rem;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 `;

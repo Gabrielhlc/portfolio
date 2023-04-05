@@ -1,14 +1,18 @@
-import { ButtonSizeProps, Container } from "./styles";
+import Link from "next/link";
+import { ButtonSizeProps, Button as ButtonContainer } from "./styles";
 
 interface ButtonProps {
     text: string;
     size: ButtonSizeProps;
+    onClickURL?: string;
 }
 
-export function Button({ text, size }: ButtonProps) {
+export function Button({ text, size, onClickURL = '' }: ButtonProps) {
     return (
-        <Container size={size}>
-            {text}
-        </Container>
+        <Link href={onClickURL} target="_blank" style={{ marginTop: 'auto' }}>
+            <ButtonContainer size={size}>
+                {text}
+            </ButtonContainer>
+        </Link>
     )
 }

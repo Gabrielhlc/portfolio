@@ -4,22 +4,25 @@ import { HeroSection } from '@/components/HeroSection'
 import { Nav } from '@/components/Nav'
 import { Projects } from '@/components/Projects'
 import { Technologies } from '@/components/Technologies'
-import { Container } from '@/styles/home'
+
+import { Container, PageLayout } from '@/styles/home'
 
 export default function Home() {
   return (
     <Container>
       <Nav />
 
-      <HeroSection />
+      <PageLayout>
+        <HeroSection />
 
-      <Projects />
+        <Projects />
 
-      <Technologies />
+        <Technologies />
 
-      <AboutMe />
+        <AboutMe />
 
-      <Footer />
+        <Footer />
+      </PageLayout>
 
     </Container>
   )

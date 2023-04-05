@@ -1,8 +1,7 @@
-import styled, { Keyframes, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
-    margin-left: 60px;
-    margin-bottom: 150px;
+    margin-bottom: 9.5rem;
 
     display: flex;
     align-items: center;
@@ -42,7 +41,7 @@ export const Profile = styled.div`
     display: flex;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0px 5px 34px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 34px 5px rgba(0, 0, 0, 0.7);
 `;
 
 const rotate = keyframes`
@@ -61,8 +60,14 @@ export const OrbitWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  animation: ${rotate} 4s linear infinite;
+  animation: ${rotate} 7s linear infinite;
 `;
+
+const rotation = keyframes`
+    0% {
+        transform: rotate(360deg);
+    }
+`
 
 export const Orbit1 = styled.div`
     position: absolute;
@@ -74,9 +79,11 @@ export const Orbit2 = styled.div`
     position: absolute;
     top: 300px;
     left: -20px;
+    animation: ${rotation} 7s linear infinite;
 `;
 export const Orbit3 = styled.div`
     position: absolute;
     top: 300px;
     right: -20px;
+    animation: ${rotation} 7s linear infinite;
 `;

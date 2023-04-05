@@ -4,7 +4,7 @@ export const Container = styled.div`
     width: 100%;
     height: 137px;
     
-    margin-bottom: 120px;
+    margin-bottom: 7.5rem;
     
     display: flex;
     align-items: center;
@@ -27,14 +27,19 @@ export const NavLink = styled.span`
     
     &:hover {
         cursor: pointer;
-        border-bottom-style: solid;
+        background-image: ${({ theme }) => theme["linear-gradient"]};
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        /* border-bottom-style: solid;
         border-bottom-width: 2px;
-        border-image: ${({ theme }) => theme["linear-gradient"]} 1;
+        border-image: ${({ theme }) => theme["linear-gradient"]} 1; */
     }
 `;
 
 export const NavItems = styled.div`
-    margin-left: 13.625rem;
+    margin: 0 auto;
     display: flex;
     gap: 6.125rem;
 `;

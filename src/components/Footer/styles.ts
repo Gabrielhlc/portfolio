@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    margin-left: 60px;
-    margin-right: 128px;
-    margin-bottom: 60px;
+    margin-right: 8rem;
+    margin-bottom: 2rem;
 
     display: flex;
     align-items: center;
-    gap: 134px;
+    gap: 8.5rem;
 `;
 
 export const Text = styled.span`

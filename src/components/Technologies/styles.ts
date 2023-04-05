@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    margin-left: 60px;
-    margin-bottom: 120px;
+    margin-bottom: 7.5rem;
 `;
 
 export const Title = styled.h1`
@@ -11,8 +10,8 @@ export const Title = styled.h1`
 `;
 
 export const StackContainer = styled.div`
-    margin-left: 108px;
-    margin-right: 108px;
+    margin-left: 6.75rem;
+    margin-right: 6.75rem;
     margin-bottom: 132px;
 `;
 
@@ -73,5 +72,5 @@ export const AdditionalGrid = styled.div`
 
 export const AdditionalNode = styled.span`
     font-size: 1.75rem;
-    margin-left: 108px;
+    margin-left: 6.75rem;
 `;
