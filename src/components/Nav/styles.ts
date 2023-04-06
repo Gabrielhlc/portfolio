@@ -26,12 +26,14 @@ export const NavLink = styled.span`
     font-size: 2rem;
     
     &:hover {
-        cursor: pointer;
         background-image: ${({ theme }) => theme["linear-gradient"]};
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
+        transition: color 0.3s ease;
+
+        cursor: pointer;
     }
 `;
 

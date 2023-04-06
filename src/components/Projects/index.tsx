@@ -17,7 +17,7 @@ export function Projects() {
 
     const styles = useSpring({
         opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(30%)',
+        transform: inView ? 'translateY(0)' : 'translateY(20%)',
 
         width: '100%',
         marginLeft: '6.75rem',
