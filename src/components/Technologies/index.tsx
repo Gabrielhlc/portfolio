@@ -1,25 +1,47 @@
-import { AdditionalGrid, AdditionalNode, AdditionalTitle, Container, Stack, StackContainer, StackLevel, StackProgress, StackTexts, StackTitle, StackTrack, Title } from "./styles";
-
 import { stacks } from '../../../stacks.js';
 
+import { useInView } from 'react-intersection-observer';
+
+import {
+    AdditionalGrid,
+    AdditionalNode,
+    AdditionalTitle,
+    Container,
+    Stack,
+    StackContainer,
+    StackLevel,
+    StackProgress,
+    StackTexts,
+    StackTitle,
+    StackTrack,
+    Title
+} from "./styles";
+
 export function Technologies() {
+
+    const [ref, inView] = useInView({
+        threshold: 0.05,
+    })
+
     return (
         <Container id="technologies">
             <Title>Technologies</Title>
 
-            <StackContainer>
-                {stacks.map(stack => (
-                    <Stack key={stack.name}>
-                        <StackTexts>
-                            <StackTitle>{stack.name}</StackTitle>
-                            <StackLevel>{stack.level}</StackLevel>
-                        </StackTexts>
-                        <StackTrack>
-                            <StackProgress progress={stack.bar} />
-                        </StackTrack>
-                    </Stack>
-                ))}
-            </StackContainer>
+            <div ref={ref}>
+                <StackContainer>
+                    {stacks.map(stack => (
+                        <Stack key={stack.name}>
+                            <StackTexts>
+                                <StackTitle>{stack.name}</StackTitle>
+                                <StackLevel>{stack.level}</StackLevel>
+                            </StackTexts>
+                            <StackTrack>
+                                <StackProgress progress={stack.bar} inView={inView} />
+                            </StackTrack>
+                        </Stack>
+                    ))}
+                </StackContainer>
+            </div>
 
             <AdditionalTitle>Additional technologies and skills</AdditionalTitle>
 

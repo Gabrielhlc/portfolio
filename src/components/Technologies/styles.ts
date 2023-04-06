@@ -12,13 +12,14 @@ export const Title = styled.h1`
 export const StackContainer = styled.div`
     margin-left: 6.75rem;
     margin-right: 6.75rem;
-    margin-bottom: 132px;
+    margin-bottom: 8.25rem;
 `;
 
 export const Stack = styled.div`
+    margin-bottom: 2.5rem;
+
     display: flex;
     flex-direction: column;
-    margin-bottom: 2.5rem;
 `;
 
 export const StackTexts = styled.div`
@@ -49,10 +50,14 @@ export const StackTrack = styled.div`
 
 type ProgressProps = {
     progress: string;
+    inView: boolean;
 }
 
 export const StackProgress = styled.div<ProgressProps>`
-    width: ${({ progress }) => progress};
+    width: ${({ inView, progress }) => inView ? progress : '0%'};
+    
+    transition: width 2s ease;
+    
     height: 1rem;
 
     background: ${({ theme }) => theme["linear-gradient"]};

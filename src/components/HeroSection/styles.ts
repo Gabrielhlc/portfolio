@@ -60,7 +60,7 @@ export const OrbitWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  animation: ${rotate} 7s linear infinite;
+  animation: ${rotate} 6s linear infinite;
 `;
 
 const rotation = keyframes`
@@ -79,11 +79,11 @@ export const Orbit2 = styled.div`
     position: absolute;
     top: 300px;
     left: -20px;
-    animation: ${rotation} 7s linear infinite;
+    animation: ${rotation} 6s linear infinite;
 `;
 export const Orbit3 = styled.div`
     position: absolute;
     top: 300px;
     right: -20px;
-    animation: ${rotation} 7s linear infinite;
+    animation: ${rotation} 6s linear infinite;
 `;
