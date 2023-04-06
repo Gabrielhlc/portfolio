@@ -32,9 +32,6 @@ export const NavLink = styled.span`
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
-        /* border-bottom-style: solid;
-        border-bottom-width: 2px;
-        border-image: ${({ theme }) => theme["linear-gradient"]} 1; */
     }
 `;
 
