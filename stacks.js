@@ -35,7 +35,7 @@ export const stacks = [
         bar: '25%',
     },
     {
-        name: 'PostgreSQL, MySQL & MongoDB',
+        name: 'PostgreSQL & MongoDB',
         level: 'Beginner',
         bar: '25%',
     }

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "../Button";
-import { Link as ScrollLink } from 'react-scroll';
 
 import reactSvg from '../../assets/react.svg';
 import typescriptSvg from '../../assets/typescript.svg';
@@ -30,9 +29,7 @@ export function HeroSection() {
 
                 <ButtonContainer>
                     {/* único jeito que encontrei para "quebrar" o protocolo do href do botão */}
-                    <ScrollLink to="projects" smooth={true}>
-                        <Button size="md" text="Let's begin!" />
-                    </ScrollLink>
+                    <Button size="md" text="Let's begin!" onClickURL="#projects" />
                 </ButtonContainer>
             </InfoWrapper>
 
