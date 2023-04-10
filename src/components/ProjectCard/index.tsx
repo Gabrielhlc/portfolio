@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { Button } from "../Button";
-import { Container, Description, Divider, Title } from "./styles";
+import { Container, Description, Divider, Tag, Tags, Title } from "./styles";
 
 interface ProjectCardProps {
     project: string;
@@ -8,14 +8,21 @@ interface ProjectCardProps {
     alt: string;
     description: string;
     githubPage: string;
+    tags: string[];
 }
 
-export function ProjectCard({ project, source, alt, description, githubPage }: ProjectCardProps) {
+export function ProjectCard({ project, source, alt, description, githubPage, tags }: ProjectCardProps) {
     return (
         <Container>
             <Image src={source} alt={alt} width={500} height={266} style={{ borderRadius: "8px" }} />
 
             <Title>{project}</Title>
+
+            <Tags>
+                {tags.map(tag => (
+                    <Tag>{tag}</Tag>
+                ))}
+            </Tags>
 
             <Divider />
 

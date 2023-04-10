@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 550px;
-    height: 700px;
+    height: 750px;
 
     padding: 25px;
     background: transparent;
@@ -22,6 +22,24 @@ export const Container = styled.div`
 
 export const Title = styled.span`
     font-size: 2rem;
+`;
+
+export const Tags = styled.div`
+    width: 100%;
+    margin-top: -10px;
+
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+`;
+
+export const Tag = styled.span`
+    padding: 4px 12px;
+
+    background-color: ${({ theme }) => theme.stackTrack};
+    color: ${({ theme }) => theme.gray};
+    border-radius: 83px;
+    
 `;
 
 export const Divider = styled.div`
