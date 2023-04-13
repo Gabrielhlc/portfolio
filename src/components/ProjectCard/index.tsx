@@ -20,7 +20,7 @@ export function ProjectCard({ project, source, alt, description, githubPage, tag
 
             <Tags>
                 {tags.map(tag => (
-                    <Tag>{tag}</Tag>
+                    <Tag key={tag}>{tag}</Tag>
                 ))}
             </Tags>
 
