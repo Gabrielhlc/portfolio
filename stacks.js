@@ -1,32 +1,37 @@
 export const stacks = [
     {
         name: 'HTML',
-        level: 'Advanced',
+        level: 'Proficient',
         bar: '80%',
     },
     {
         name: 'CSS, SASS & SCSS',
-        level: 'Advanced',
+        level: 'Proficient',
         bar: '80%',
     },
     {
         name: 'JavaScript & TypeScript',
-        level: 'Advanced',
+        level: 'Proficient',
         bar: '80%',
     },
     {
         name: 'React',
-        level: 'Advanced',
+        level: 'Proficient',
         bar: '80%',
     },
     {
         name: 'React Native',
-        level: 'Advanced',
+        level: 'Proficient',
         bar: '80%',
     },
     {
+        name: 'Flutter',
+        level: 'Intermediate',
+        bar: '50%',
+    },
+    {
         name: 'Next.js',
-        level: 'Regular',
+        level: 'Intermediate',
         bar: '50%',
     },
     {
