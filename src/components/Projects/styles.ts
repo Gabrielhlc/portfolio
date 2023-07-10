@@ -5,6 +5,13 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    margin-bottom: 100px;
+    margin-bottom: 0.5rem;
     font-size: 3.5rem;
+`;
+
+export const Subtitle = styled.h2`
+    margin-left: 3.875rem;
+    font-size: 1.5rem;
+    color: ${({ theme }) => theme.gray};
+    margin-bottom: 4rem; 
 `;

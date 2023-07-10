@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Image from "next/image";
+
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "react-spring";
 
@@ -9,17 +12,20 @@ import nlwesports from "../../assets/nlwesports.png";
 import ignitegym from "../../assets/ignitegym2.png";
 import cishop from "../../assets/cishop.png";
 import coffeeDelivery from "../../assets/coffee-delivery.jpeg.jpeg";
+import github from "../../assets/github.svg";
 
-import { Container, Title } from "./styles";
+import { Container, Subtitle, Title } from "./styles";
+
 
 export function Projects() {
     const [ref, inView] = useInView({
-        threshold: 0.15,
+        threshold: 0.2,
+        triggerOnce: true,
     })
 
     const styles = useSpring({
         opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(20%)',
+        transform: inView ? 'translateX(0)' : 'translateX(-20%)',
 
         width: '100%',
         marginLeft: '6.75rem',
@@ -31,7 +37,13 @@ export function Projects() {
 
     return (
         <Container id="projects">
-            <Title>Projects</Title>
+            <Title>
+                Projects <Link href="https://github.com/Gabrielhlc" target="_blank">
+                    <Image src={github} alt="github" height={50} />
+                </Link>
+            </Title>
+
+            <Subtitle>Check out some of my cherished projects!</Subtitle>
 
             <div ref={ref}>
                 <animated.div style={styles}>

@@ -5,12 +5,20 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    margin-bottom: 100px;    
+    margin-bottom: 0.5rem;    
     font-size: 3.5rem;
+`;
+
+export const Subtitle = styled.h2`
+    margin-left: 3.875rem;
+    margin-bottom: 4rem; 
+
+    font-size: 1.5rem;
+    color: ${({ theme }) => theme.gray};
 `;
 
 export const Description = styled.p`
     width: 75%;
-    margin-left: 3.875rem;
+    margin-left: 6.75rem;
     font-size: 1.75rem;
 `;

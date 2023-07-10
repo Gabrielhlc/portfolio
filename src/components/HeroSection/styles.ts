@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
+var XASA = 10;
+
 export const Container = styled.div`
     margin-bottom: 9.5rem;
 
@@ -50,7 +52,6 @@ const rotate = keyframes`
   }
 `;
 
-
 export const OrbitWrapper = styled.div`
   z-index: 3;
   width: 100%;
@@ -61,6 +62,7 @@ export const OrbitWrapper = styled.div`
   transform: translate(-50%, -50%);
   border-radius: 50%;
   animation: ${rotate} 6s linear infinite;
+
 `;
 
 const rotation = keyframes`

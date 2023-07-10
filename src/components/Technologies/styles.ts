@@ -5,8 +5,17 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    margin-bottom: 100px;    
+    margin-bottom: 1rem;
     font-size: 3.5rem;
+`;
+
+export const Caption = styled.h2`
+    margin-left: 3.875rem;
+    margin-bottom: 4rem; 
+
+    font-size: 1.5rem;
+    line-height: 160%;
+    color: ${({ theme }) => theme.gray};
 `;
 
 export const StackContainer = styled.div`
@@ -56,7 +65,7 @@ type ProgressProps = {
 export const StackProgress = styled.div<ProgressProps>`
     width: ${({ inView, progress }) => inView ? progress : '0%'};
     
-    transition: width 2s ease;
+    transition: width 3s ease;
     
     height: 1rem;
 

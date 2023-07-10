@@ -6,6 +6,7 @@ import {
     AdditionalGrid,
     AdditionalNode,
     AdditionalTitle,
+    Caption,
     Container,
     Stack,
     StackContainer,
@@ -14,18 +15,27 @@ import {
     StackTexts,
     StackTitle,
     StackTrack,
+
     Title
 } from "./styles";
 
 export function Technologies() {
 
     const [ref, inView] = useInView({
-        threshold: 0.05,
+        threshold: 0.2,
+        triggerOnce: true,
     })
 
     return (
         <Container id="technologies">
             <Title>Technologies</Title>
+
+            <Caption>
+                Proficient - Worked on 7 or more projects and I'm highly skilled in it. <br />
+                Intermediate - Worked on 3 to 6 projects and have a good grasp. <br />
+                Beginner - Workd on 1 to 2 projects and have a basic understanding.
+            </Caption>
+
 
             <div ref={ref}>
                 <StackContainer>
