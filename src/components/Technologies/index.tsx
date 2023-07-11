@@ -33,7 +33,7 @@ export function Technologies() {
             <Caption>
                 Proficient - Worked on 7 or more projects and I'm highly skilled in it. <br />
                 Intermediate - Worked on 3 to 6 projects and have a good grasp. <br />
-                Beginner - Workd on 1 to 2 projects and have a basic understanding.
+                Beginner - Worked on 1 to 2 projects and have a basic understanding.
             </Caption>
 
 
