@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
@@ -12,18 +12,24 @@ export const Container = styled.div`
 
 export const Logo = styled.div`
     display: flex;
-    gap: 0.75rem;
+    gap: 0.5rem;
     align-items: center;
 `;
 
 export const LogoText = styled.span`
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.75rem;
+    @media (max-width: 1400px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const NavLink = styled.span`
     font-weight: 500;
     font-size: 2rem;
+    @media (max-width: 992px) {
+        font-size: 1.5rem;
+    }
     
     &:hover {
         background-image: ${({ theme }) => theme["linear-gradient"]};
@@ -38,8 +44,13 @@ export const NavLink = styled.span`
 `;
 
 export const NavItems = styled.div`
-    margin: 0 auto;
+    flex: 1;
+    /* margin: 0 auto; */
     display: flex;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        gap: 4rem;
+    }
     gap: 6.125rem;
 `;
 

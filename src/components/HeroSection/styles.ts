@@ -1,7 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-var XASA = 10;
-
 export const Container = styled.div`
     margin-bottom: 9.5rem;
 
@@ -10,13 +8,20 @@ export const Container = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
+    @media (max-width: 1300px) {
+        width: 100%;
+    }
     width: 70%;
+
     display: flex;
     flex-direction: column;
 `;
 
 export const Title = styled.h1`
     margin-bottom: 2rem;
+    @media (max-width: 992px) {
+        font-size: 3rem;
+    }
     font-size: 3.5rem;
 `;
 
@@ -25,8 +30,23 @@ export const Subtitle = styled.h2`
     margin-bottom: 4.5rem;
     width: 80%;
 
+    @media (max-width: 992px) {
+        font-size: 1.75rem;
+        margin-bottom: 2.5rem;
+    }
+
     font-size: 2.25rem;
+    
     color: ${({ theme }) => theme.gray};
+`;
+
+export const ProfileHidden = styled.div`
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
 `;
 
 export const ButtonContainer = styled.div`

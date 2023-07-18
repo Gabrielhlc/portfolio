@@ -14,7 +14,7 @@ import cishop from "../../assets/cishop.png";
 import coffeeDelivery from "../../assets/coffee-delivery.jpeg.jpeg";
 import github from "../../assets/github.svg";
 
-import { Container, Subtitle, Title } from "./styles";
+import { Container, ProjectsWrapper, Subtitle, Title } from "./styles";
 
 
 export function Projects() {
@@ -26,14 +26,7 @@ export function Projects() {
     const styles = useSpring({
         opacity: inView ? 1 : 0,
         transform: inView ? 'translateX(0)' : 'translateX(-20%)',
-
-        width: '100%',
-        marginLeft: '6.75rem',
-        marginRight: '6.75rem',
-
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-    })
+    });
 
     return (
         <Container id="projects">
@@ -45,8 +38,8 @@ export function Projects() {
 
             <Subtitle>Check out some of my cherished projects!</Subtitle>
 
-            <div ref={ref}>
-                <animated.div style={styles}>
+            <animated.div style={styles} ref={ref}>
+                <ProjectsWrapper>
                     <ProjectCard
                         source={igniteShop}
                         alt="Ignite Shop"
@@ -95,8 +88,8 @@ export function Projects() {
                         githubPage="https://github.com/Gabrielhlc/coffee-delivery"
                         tags={['Web', 'React']}
                     />
-                </animated.div>
-            </div>
+                </ProjectsWrapper>
+            </animated.div>
         </Container>
     )
 }

@@ -7,13 +7,24 @@ import github from "../../assets/github.svg";
 import linkedin from "../../assets/linkedin.svg";
 
 import { Container, Links, Logo, LogoText, NavItems, NavLink } from "./styles";
+import useCurrentBreakpoint from "@/hooks/useCurrentBreakpoint";
+
+
 
 export function Nav() {
+
+    const currentBreakpoint = useCurrentBreakpoint();
+
     return (
         <Container>
             <Logo>
-                <Image src={logo} alt="logo" width={47} height={47} />
-                <LogoText>Gabriel Carvalho</LogoText>
+                {currentBreakpoint === "extraLarge" && (
+                    <>
+                        <Image src={logo} alt="logo" width={47} height={47} />
+                        <LogoText>Gabriel Carvalho</LogoText>
+                    </>
+                )}
+
             </Logo>
 
             <NavItems>
@@ -34,9 +45,12 @@ export function Nav() {
                 <Link href="https://github.com/Gabrielhlc" target="_blank">
                     <Image src={github} alt="github" />
                 </Link>
-                <Link href="https://www.linkedin.com/in/gabriel-carvalho-54790b21b/" target="_blank">
-                    <Image src={linkedin} alt="linkedin" />
-                </Link>
+                {(currentBreakpoint === "large" || currentBreakpoint === "extraLarge") && (
+                    <Link href="https://www.linkedin.com/in/gabriel-carvalho-54790b21b/" target="_blank">
+                        <Image src={linkedin} alt="linkedin" />
+                    </Link>
+                )}
+
             </Links>
         </Container>
     )
