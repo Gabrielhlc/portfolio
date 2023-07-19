@@ -4,6 +4,12 @@ export const Container = styled.div`
     width: 550px;
     height: 750px;
 
+    @media (max-width: 576px) {
+        width: 440px;
+        height: 650px;
+        margin-right: -4rem;
+    }
+
     padding: 25px;
     background: transparent;
     
@@ -16,12 +22,12 @@ export const Container = styled.div`
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
 
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
 `;
 
 
 export const Title = styled.span`
-    font-size: 2rem;
+    font-size: 1.5rem;
 `;
 
 export const Tags = styled.div`
@@ -51,4 +57,8 @@ export const Divider = styled.div`
 
 export const Description = styled.p`
     font-size: 1.75rem;
+
+    @media (max-width: 576px) {
+        font-size: 1.25rem;
+    }
 `;

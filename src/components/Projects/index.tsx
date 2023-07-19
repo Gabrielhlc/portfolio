@@ -15,6 +15,8 @@ import coffeeDelivery from "../../assets/coffee-delivery.jpeg.jpeg";
 import github from "../../assets/github.svg";
 
 import { Container, ProjectsWrapper, Subtitle, Title } from "./styles";
+import useCurrentBreakpoint from "@/hooks/useCurrentBreakpoint";
+import { useEffect, useState } from "react";
 
 
 export function Projects() {
@@ -23,16 +25,29 @@ export function Projects() {
         triggerOnce: true,
     })
 
+    const [imageSize, setImageSize] = useState<number>();
+
+    const breakpoint = useCurrentBreakpoint();
+
+
     const styles = useSpring({
         opacity: inView ? 1 : 0,
         transform: inView ? 'translateX(0)' : 'translateX(-20%)',
     });
 
+    useEffect(() => {
+        if (breakpoint === "extraLarge") {
+            setImageSize(50);
+        } else {
+            setImageSize(35);
+        }
+    }, [breakpoint]);
+
     return (
         <Container id="projects">
             <Title>
                 Projects <Link href="https://github.com/Gabrielhlc" target="_blank">
-                    <Image src={github} alt="github" height={50} />
+                    <Image src={github} alt="github" height={imageSize} />
                 </Link>
             </Title>
 
