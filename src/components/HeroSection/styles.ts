@@ -8,10 +8,11 @@ export const Container = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
+    width: 70%;
+
     @media (max-width: 1300px) {
         width: 100%;
     }
-    width: 70%;
 
     display: flex;
     flex-direction: column;
@@ -19,10 +20,10 @@ export const InfoWrapper = styled.div`
 
 export const Title = styled.h1`
     margin-bottom: 2rem;
-    @media (max-width: 992px) {
-        font-size: 3rem;
-    }
     font-size: 3.5rem;
+    @media (max-width: 992px) {
+        font-size: 2.5rem;
+    }
 `;
 
 export const Subtitle = styled.h2`
@@ -35,6 +36,12 @@ export const Subtitle = styled.h2`
         margin-bottom: 2.5rem;
     }
 
+    @media (max-width: 576px) {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+        width: 100%;
+    }
+
     font-size: 2.25rem;
     
     color: ${({ theme }) => theme.gray};
@@ -43,14 +50,22 @@ export const Subtitle = styled.h2`
 export const ProfileHidden = styled.div`
     margin: 0 auto;
     margin-bottom: 2.5rem;
+    @media (max-width: 576px){
+        margin-right: 1rem;
+    }
+    
     display: flex;
     justify-content: center;
+
     border-radius: 50%;
     overflow: hidden;
 `;
 
 export const ButtonContainer = styled.div`
     margin-left: 6.75rem;
+    @media (max-width: 576px) {
+        margin-left: 3.875rem;
+    }
 `;
 
 export const ProfileContainer = styled.div`
