@@ -75,6 +75,10 @@ export const StackProgress = styled.div<ProgressProps>`
 
 export const AdditionalTitle = styled.h1`
     font-size: 2.5rem;
+    @media (max-width: 1300px) {
+        font-size: 1.75rem;
+    }
+    
     margin-bottom: 4.5rem;
 `;
 
@@ -82,9 +86,17 @@ export const AdditionalGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1.5rem;
+    @media (max-width: 1300px) {
+        grid-gap: 1.25rem;
+    }
 `;
 
 export const AdditionalNode = styled.span`
-    font-size: 1.75rem;
     margin-left: 6.75rem;
+    
+    font-size: 1.75rem;
+    @media (max-width: 1300px) {
+        margin-left: 3.875rem;
+        font-size: 1.15rem;
+    }
 `;
