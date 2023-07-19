@@ -6,15 +6,17 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    gap: 8.5rem;
+    justify-content: space-between;
 `;
 
 export const Text = styled.span`
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    @media (max-width: 1300px) {
+        font-size: 1rem;
+    }
 `;
 
 export const Links = styled.div`
-    margin-left: auto;
     display: flex;
     gap: 2rem;
 `;
