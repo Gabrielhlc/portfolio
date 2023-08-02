@@ -124,6 +124,10 @@ export const AdditionalGrid = styled.div`
     @media (max-width: 1300px) {
         grid-gap: 1.25rem;
     }
+    
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 export const AdditionalNode = styled.span`
@@ -138,6 +142,6 @@ export const AdditionalNode = styled.span`
     @media (max-width: 576px) {
         margin-left: 2rem;
         margin-right: -4rem;
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 `;
