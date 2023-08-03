@@ -31,7 +31,7 @@ export const ProjectsWrapper = styled.div`
     
     @media (min-width: 1520px) {
         margin-left: 6.75rem;
-    margin-right: 6.75rem;
+        margin-right: 6.75rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
