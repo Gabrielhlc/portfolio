@@ -58,6 +58,16 @@ export function AboutMe() {
                             </ButtonContainer>
                         </TimeContent>
                     </TimelineCard>
+                    <TimelineCard>
+                        <TimeDate>29 DEC</TimeDate>
+                        <TimeContent>
+                            <ContentTitle>Banco de Dados e Linguagem SQL com PostgreSQL</ContentTitle>
+                            <ContentWorkload>16 hours</ContentWorkload>
+                            <ButtonContainer>
+                                <Button text="Certificate" size="xs" onClickURL="https://www.udemy.com/certificate/UC-009b950b-3c30-4acd-8921-21f2f20babe4/" />
+                            </ButtonContainer>
+                        </TimeContent>
+                    </TimelineCard>
                 </TimelineCards>
             </Timeline>
         </Container>

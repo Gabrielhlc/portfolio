@@ -35,13 +35,13 @@ export const stacks = [
         bar: '50%',
     },
     {
+        name: 'PostgreSQL & MongoDB',
+        level: 'Intermediate',
+        bar: '50%',
+    },
+    {
         name: 'Node.js',
         level: 'Beginner',
         bar: '25%',
     },
-    {
-        name: 'PostgreSQL & MongoDB',
-        level: 'Beginner',
-        bar: '25%',
-    }
 ]
